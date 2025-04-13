@@ -75,12 +75,13 @@ export default function Home({
           技术支持{' '}
           <a href="https://github.com/CMSZ001/UptimeFlare" target="_blank">
             UptimeFlare
-          </a>{' '}
+          </a>
+          <br/>
           Made with ❤ by{' '}
           <a href="https://github.com/lyc8503" target="_blank">
-            lyc8503
+            lyc8503{' '}
           </a>
-          and
+          and{' '}
           <a href="https://github.com/CMSZ001" target="_blank">
             CMSZ001
           </a>
