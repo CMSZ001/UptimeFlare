@@ -1,14 +1,11 @@
 const pageConfig = {
   // Title for your status page
-  title: "CMSZ服务监控",
+  title: "UptimeFlare",
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
     { link: 'https://github.com/CMSZ001', label: 'GitHub', highlight: true },
     { link: 'mailto:me@acmsz.top', label: '联系我', highlight: true },
   ],
-  // [OPTIONAL] Group your monitors
-  // If not specified, all monitors will be shown in a single list
-  // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
   group: {
     "网页服务监控": ['blog', 'umami'],
     "服务器服务监控": ['mcserver'],
