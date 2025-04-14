@@ -29,14 +29,14 @@ export default function OverallStatus({
   let statusString = ''
   let icon = <IconAlertCircle style={{ width: 64, height: 64, color: '#b91c1c' }} />
   if (state.overallUp === 0 && state.overallDown === 0) {
-    statusString = '暂无数据'
+    statusString = 'No data yet'
   } else if (state.overallUp === 0) {
-    statusString = '所有服务均出现故障'
+    statusString = 'All systems not operational'
   } else if (state.overallDown === 0) {
-    statusString = '所有服务运行正常'
+    statusString = 'All systems operational'
     icon = <IconCircleCheck style={{ width: 64, height: 64, color: '#059669' }} />
   } else {
-    statusString = `部分服务出现故障`
+    statusString = `Some systems not operational (${state.overallDown} out of ${state.overallUp + state.overallDown})`
   }
 
   const [openTime] = useState(Math.round(Date.now() / 1000))
@@ -65,8 +65,8 @@ export default function OverallStatus({
         {statusString}
       </Title>
       <Title mt="sm" style={{ textAlign: 'center', color: '#70778c' }} order={5}>
-        更新时间:{' '}
-        {`${new Date(state.lastUpdate * 1000).toLocaleString()} (${currentTime - state.lastUpdate} 秒前更新)`}
+        Last updated on:{' '}
+        {`${new Date(state.lastUpdate * 1000).toLocaleString()} (${currentTime - state.lastUpdate} sec ago)`}
       </Title>
     </>
   )
