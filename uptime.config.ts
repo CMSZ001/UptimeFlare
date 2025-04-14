@@ -7,7 +7,7 @@ const pageConfig = {
     { link: 'mailto:me@acmsz.top', label: '联系我', highlight: true },
   ],
   group: {
-    "网页服务监控": ['blog', 'umami'],
+    "网页服务监控": ['blog', 'dnsflare', 'umami'],
     "服务器服务监控": ['mcserver'],
   },
 }
