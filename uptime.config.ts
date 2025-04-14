@@ -14,7 +14,7 @@ const pageConfig = {
 
 const workerConfig = {
   // Write KV at most every 3 minutes unless the status changed
-  kvWriteCooldownMinutes: 5,
+  kvWriteCooldownMinutes: 3,
   // Enable HTTP Basic auth for status page & API by uncommenting the line below, format `<USERNAME>:<PASSWORD>`
   // passwordProtection: 'username:password',
   // Define all your monitors here
@@ -29,8 +29,7 @@ const workerConfig = {
       hideLatencyChart: false,
       expectedCodes: [200],
       timeout: 10000,
-//      checkProxy: 'https://uptime-proxy.acmsz.top/',
-//      checkProxyFallback: true,
+      checkProxy: 'worker://apac',
     },
     {
       id: 'dnsflare',
@@ -42,8 +41,7 @@ const workerConfig = {
       hideLatencyChart: false,
       expectedCodes: [200],
       timeout: 10000,
-//      checkProxy: 'https://uptime-proxy.acmsz.top/',
-//      checkProxyFallback: true,
+      checkProxy: 'worker://apac',
     },
     {
       id: 'umami',
@@ -55,8 +53,7 @@ const workerConfig = {
       hideLatencyChart: false,
       expectedCodes: [200],
       timeout: 10000,
-//      checkProxy: 'https://uptime-proxy.acmsz.top/',
-//      checkProxyFallback: true,
+      checkProxy: 'worker://apac',
     },
     {
       id: 'hw',
@@ -68,8 +65,7 @@ const workerConfig = {
       hideLatencyChart: false,
       expectedCodes: [200],
       timeout: 10000,
-//      checkProxy: 'https://uptime-proxy.acmsz.top/',
-//      checkProxyFallback: true,
+      checkProxy: 'worker://apac',
     },
     {
       id: 'mcserver',
@@ -79,6 +75,7 @@ const workerConfig = {
       tooltip: '',
       statusPageLink: '',
       timeout: 5000,
+      checkProxy: 'worker://apac',
     },
   ],
   callbacks: {
