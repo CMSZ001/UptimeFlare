@@ -12,7 +12,7 @@ export default async function handler(req: NextRequest): Promise<Response> {
 
   const stateStr = await UPTIMEFLARE_STATE?.get('state')
   if (!stateStr) {
-    return new Response(JSON.stringify({ error: 'No data available' }), {
+    return new Response(JSON.stringify({ error: '无数据可用' }), {
       status: 500,
       headers: {
         'Content-Type': 'application/json'
